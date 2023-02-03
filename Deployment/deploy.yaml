@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: bakehouse
+  name: bakehouse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bakehouse
+  template:
+    metadata:
+      labels:
+        app: bakehouse
+    spec:
+      containers:
+      - image: kareemelkasaby/itimansbakehouse:${BUILD_NUMBER}
+        name: bakehouse
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources: {}
