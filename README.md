@@ -31,8 +31,3 @@ Password: 123456
 * JavaScript
 
 ***
-
-### Contributors:
-|![Kareem_Elkasaby](images/kareem1.jpg)|![Mina_Maher](images/mina.jpg)|![Maha_Amin](images/maha.jpg)|
-|:-----------------:|:-----------:|:-----------------:|
-|[Kareem El-Kasaby](https://github.com/kareemelkasaby1)|[Mina Maher](https://github.com/MinaMaher0)|[Maha Amin](https://github.com/MahaAmin)|
