@@ -23,10 +23,12 @@ pipeline {
         stage('deploy') {
             steps {
                 script {
-                    echo "Hello DevOps"
-                        }
-                    }
+                    sh """
+                        ls
+                        echo "Hello"
+                        """
                 }
             }
         }
+    }
 }
