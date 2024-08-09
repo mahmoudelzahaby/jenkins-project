@@ -23,15 +23,7 @@ pipeline {
         stage('deploy') {
             steps {
                 script {
-                    if (params.ENV == "dev" || params.ENV == "test" || params.ENV == "prod") {
-                            withCredentials([file(credentialsId: 'kubernetes_kubeconfig', variable: 'KUBECONFIG')]) {
-                          sh """
-                              export BUILD_NUMBER=\$(cat ../jenkins-pro.txt)
-                              mv Deployment/deploy.yaml Deployment/deploy.yaml.tmp
-                              cat Deployment/deploy.yaml.tmp | envsubst > Deployment/deploy.yaml
-                              rm -f Deployment/deploy.yaml.tmp
-                              kubectl apply -f Deployment --kubeconfig=${KUBECONFIG}
-                            """
+                    echo "Hello DevOps"
                         }
                     }
                 }
