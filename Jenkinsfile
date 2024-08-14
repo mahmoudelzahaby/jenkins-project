@@ -11,8 +11,8 @@ pipeline {
                        withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                            sh """
                                 docker login -u $USERNAME -p $PASSWORD
-                                docker build -t mahmoudahaby/jenkins-pro:${BUILD_NUMBER} .
-                                docker push mahmoudahaby/jenkins-pro:${BUILD_NUMBER}
+                                docker build -t mahmoudahaby/jenkins-lab:${BUILD_NUMBER} .
+                                docker push mahmoudahaby/jenkins-lab:${BUILD_NUMBER}
                                 echo ${BUILD_NUMBER} > ../jenkins-pro.txt
                            """
                        }
